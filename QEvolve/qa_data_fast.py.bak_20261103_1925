@@ -1,0 +1,50 @@
+import json, os
+from typing import Optional
+import numpy as np
+from datasets import Dataset
+from transformers import AutoTokenizer
+from eval_agent.data_utils import get_chat_template
+
+def _qa_prompt(tokenizer, model_name, conversations):
+    roles={"human":"user","gpt":"assistant","user":"user","assistant":"assistant"}
+    messages=[]
+    for i,sent in enumerate(conversations):
+        role=roles[sent["from"]]; expected="user" if i%2==0 else "assistant"
+        if role != expected: raise ValueError(f"role mismatch {i}: {role} != {expected}")
+        messages.append({"role":role,"content":sent["value"]})
+    return get_chat_template(model_name).get_prompt(messages)
+
+def preprocess_traj_dataset_qa_fast(data_path:str, failed_data_path:Optional[str], model_name:str, out_dir=None, gamma=0.95, max_steps=128, max_length=4096, use_aux_reward=False):
+    rows=[json.loads(x) for x in open(data_path,encoding='utf-8') if x.strip()]
+    if failed_data_path:
+        rows += [json.loads(x) for x in open(failed_data_path,encoding='utf-8') if x.strip()]
+    tok=AutoTokenizer.from_pretrained(model_name,use_fast=True); tok.pad_token=tok.eos_token; tok.model_max_length=max_length
+    records=[]
+    for item in rows:
+        conv=item.get('conversations')
+        if not conv: continue
+        steps=[]
+        for idx in range(2,len(conv),2):
+            if idx+1>=len(conv): break
+            state=conv[:idx+1]; action=conv[:idx+2]; nxt=conv[:idx+3] if idx+2<len(conv) else action
+            steps.append((state,action,nxt))
+        steps=steps[:max_steps]
+        if not steps: continue
+        rewards=item.get('assigned_reward') or [0.0]*len(steps)
+        rewards=[float(x) for x in rewards[:len(steps)]]; rewards += [0.0]*(len(steps)-len(rewards))
+        meta=item.get('meta') or {}; final_reward=float(meta.get('reward',item.get('final_reward',0.0)) or 0.0)
+        rewards[-1]+=final_reward
+        prompts=[]
+        for st,ac,nx in steps: prompts.extend([_qa_prompt(tok,model_name,st),_qa_prompt(tok,model_name,ac),_qa_prompt(tok,model_name,nx)])
+        enc=tok(prompts,add_special_tokens=False)
+        lens=[len(x) for x in enc.input_ids]
+        state_end=[lens[3*i]-1 for i in range(len(steps))]
+        action_end=[lens[3*i+1]-1 for i in range(len(steps))]
+        next_end=[lens[3*i+2]-1 for i in range(len(steps))]
+        if any(x>max_length for x in next_end): continue
+        full_ids=tok(_qa_prompt(tok,model_name,conv),add_special_tokens=False).input_ids
+        ep=len(steps)
+        records.append({'input_ids':full_ids[:next_end[-1]+1],'state_end':state_end,'action_end':action_end,'next_end':next_end,'reward':rewards[:ep],'done':[0.0]*(ep-1)+[1.0],'weight':((np.arange(1,ep+1,dtype=np.float32)/ep + (1.0 if final_reward>0 else 0.0))*0.5+0.5).tolist(),'final_done':1,'ep_len':ep})
+    ds=Dataset.from_list(records)
+    if out_dir: os.makedirs(out_dir,exist_ok=True); ds.save_to_disk(out_dir)
+    return ds

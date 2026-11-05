@@ -1,0 +1,123 @@
+id	subfield	probe_type	concept	derivation	logic	planning
+1718	Algebra	single	0.03	0.809	0.427	0.341
+1970	Algebra	multi	0.138	0.809	0.3	0.341
+2980	Algebra	single	0.03	0.809	0.109	0.263
+1940	Algebra	single	0.03	0.726	0.236	0.186
+1969	Algebra	single	0.245	0.726	0.363	0.341
+1998	Algebra	multi	0.138	0.726	0.236	0.263
+2171	Algebra	single	0.03	0.726	0.3	0.263
+2648	Algebra	single	0.03	0.726	0.045	0.108
+2670	Geometry	single	0.045	0.681	0.109	0.213
+2884	Geometry	single	0.045	0.681	0.109	0.291
+1659	Algebra	contrast	0.03	0.644	0.3	0.341
+1716	Algebra	single	0.138	0.644	0.045	0.186
+1843	Algebra	single	0.03	0.644	0.236	0.108
+1879	Algebra	multi	0.138	0.644	0.172	0.341
+1939	Algebra	single	0.03	0.644	0.236	0.341
+2147	Algebra	single	0.03	0.644	0.109	0.263
+2425	Algebra	single	0.138	0.644	0.172	0.108
+2584	Algebra	single	0.138	0.644	0.045	0.03
+2642	Algebra	single	0.03	0.644	0.045	0.108
+2713	Algebra	single	0.138	0.644	0.109	0.03
+2717	Algebra	single	0.03	0.644	0.236	0.341
+2739	Algebra	single	0.138	0.644	0.045	0.108
+2742	Algebra	single	0.03	0.644	0.109	0.186
+2829	Algebra	single	0.03	0.644	0.236	0.341
+2854	Algebra	multi	0.353	0.644	0.109	0.263
+2022	Number Theory	single	0.12	0.636	0.405	0.123
+2216	Combinatorics	single	0.03	0.636	0.277	0.231
+2607	Number Theory	single	0.12	0.636	0.405	0.201
+2847	Combinatorics	single	0.03	0.636	0.341	0.231
+2645	Geometry	single	0.045	0.599	0.109	0.213
+1962	Number Theory	single	0.12	0.389	0.85	0.278
+1681	Number Theory	contrast	0.228	0.554	0.786	0.434
+2193	Number Theory	single	0.12	0.307	0.786	0.278
+1988	Number Theory	multi	0.12	0.389	0.723	0.434
+1606	Combinatorics	contrast	0.138	0.307	0.659	0.386
+1614	Combinatorics	single	0.03	0.472	0.659	0.464
+2921	Combinatorics	single	0.03	0.307	0.659	0.308
+1697	Combinatorics	single	0.138	0.389	0.595	0.386
+2095	Combinatorics	single	0.03	0.389	0.595	0.386
+2198	Combinatorics	single	0.03	0.307	0.532	0.308
+2464	Combinatorics	single	0.03	0.225	0.532	0.386
+2913	Algebra	contrast	0.03	0.232	0.49	0.108
+1930	Number Theory	single	0.12	0.307	0.468	0.045
+2671	Number Theory	single	0.12	0.225	0.468	0.045
+2760	Combinatorics	single	0.03	0.307	0.468	0.231
+2763	Number Theory	single	0.12	0.307	0.468	0.123
+2954	Number Theory	single	0.12	0.307	0.468	0.201
+2983	Number Theory	single	0.12	0.307	0.468	0.045
+3007	Number Theory	multi	0.335	0.225	0.468	0.045
+2701	Geometry	single	0.045	0.27	0.427	0.213
+2684	Number Theory	multi	0.228	0.225	0.405	0.201
+2971	Combinatorics	single	0.03	0.225	0.405	0.231
+1782	Combinatorics	single	0.03	0.225	0.341	0.231
+1882	Combinatorics	single	0.03	0.225	0.341	0.231
+2369	Combinatorics	single	0.03	0.225	0.341	0.153
+2460	Number Theory	single	0.12	0.225	0.341	0.045
+2525	Combinatorics	single	0.03	0.142	0.341	0.153
+2708	Number Theory	single	0.12	0.225	0.341	0.123
+2737	Combinatorics	single	0.03	0.142	0.341	0.075
+2859	Number Theory	single	0.12	0.225	0.341	0.123
+1832	Number Theory	multi	0.228	0.472	0.532	0.745
+1820	Combinatorics	contrast	0.245	0.472	0.468	0.697
+1977	Combinatorics	single	0.03	0.307	0.277	0.619
+2045	Geometry	multi	0.153	0.352	0.3	0.602
+2127	Combinatorics	single	0.03	0.307	0.341	0.542
+1828	Geometry	contrast	0.153	0.352	0.363	0.524
+1800	Number Theory	contrast	0.12	0.307	0.214	0.434
+2855	Geometry	single	0.045	0.187	0.045	0.291
+2249	Combinatorics	single	0.03	0.142	0.15	0.231
+1964	Number Theory	multi	0.12	0.472	0.659	0.667
+2010	Combinatorics	multi	0.03	0.472	0.723	0.542
+1620	Algebra	multi	0.138	0.479	0.49	0.652
+1866	Number Theory	multi	0.228	0.142	0.723	0.589
+1750	Combinatorics	multi	0.138	0.307	0.532	0.542
+1664	Combinatorics	multi	0.03	0.389	0.595	0.464
+1918	Combinatorics	multi	0.03	0.389	0.595	0.464
+1887	Combinatorics	multi	0.353	0.554	0.723	0.386
+2012	Combinatorics	multi	0.138	0.719	0.595	0.542
+1675	Geometry	multi	0.153	0.599	0.554	0.524
+2126	Combinatorics	multi	0.353	0.554	0.532	0.386
+2177	Combinatorics	multi	0.138	0.636	0.532	0.464
+1610	Algebra	multi	0.245	0.562	0.49	0.419
+1641	Combinatorics	multi	0.03	0.554	0.659	0.464
+1738	Number Theory	multi	0.12	0.636	0.595	0.356
+2111	Number Theory	multi	0.335	0.554	0.532	0.278
+1920	Combinatorics	multi	0.138	0.636	0.468	0.697
+1883	Combinatorics	multi	0.03	0.554	0.405	0.542
+1945	Combinatorics	multi	0.03	0.472	0.468	0.542
+2000	Algebra	multi	0.138	0.562	0.236	0.497
+2794	Geometry	multi	0.368	0.517	0.109	0.291
+3081	Geometry	multi	0.368	0.517	0.109	0.135
+2650	Geometry	multi	0.26	0.517	0.045	0.213
+2521	Number Theory	multi	0.335	0.472	0.15	0.045
+2784	Geometry	multi	0.26	0.434	0.045	0.213
+2838	Geometry	multi	0.26	0.352	0.045	0.213
+2657	Algebra	multi	0.245	0.397	0.109	0.108
+3077	Algebra	multi	0.245	0.397	0.045	0.108
+2836	Algebra	multi	0.245	0.315	0.045	0.186
+2748	Number Theory	multi	0.228	0.225	0.277	0.123
+2777	Number Theory	multi	0.228	0.142	0.214	0.123
+2786	Geometry	multi	0.26	0.187	0.045	0.291
+1953	Geometry	contrast	0.045	0.434	0.236	0.291
+1612	Number Theory	anchor	0.12	0.389	0.341	0.123
+1618	Number Theory	anchor	0.12	0.389	0.405	0.123
+1678	Number Theory	anchor	0.12	0.554	0.595	0.123
+1709	Number Theory	anchor	0.12	0.307	0.341	0.278
+1736	Number Theory	anchor	0.12	0.389	0.405	0.278
+1613	Algebra	anchor	0.03	0.479	0.49	0.108
+1631	Algebra	anchor	0.03	0.479	0.554	0.341
+1645	Algebra	anchor	0.03	0.397	0.427	0.341
+1687	Algebra	anchor	0.03	0.479	0.3	0.341
+1747	Algebra	anchor	0.03	0.479	0.236	0.186
+1644	Combinatorics	anchor	0.03	0.307	0.405	0.308
+1662	Combinatorics	anchor	0.138	0.472	0.468	0.464
+1694	Combinatorics	anchor	0.03	0.225	0.468	0.386
+1695	Combinatorics	anchor	0.03	0.472	0.532	0.464
+1723	Combinatorics	anchor	0.03	0.472	0.595	0.464
+1760	Geometry	anchor	0.045	0.352	0.045	0.291
+2099	Geometry	anchor	0.045	0.434	0.172	0.368
+2174	Geometry	anchor	0.153	0.517	0.236	0.368
+2253	Geometry	anchor	0.045	0.434	0.109	0.291
+2254	Geometry	anchor	0.153	0.434	0.172	0.135

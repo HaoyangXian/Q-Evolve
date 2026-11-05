@@ -1,0 +1,17 @@
+总题目数: 674
+Probe Pool 总数: 122
+
+Type A 单维:
+  concept: 0 题
+  derivation: 30 题
+  logic: 30 题
+  planning: 9 题
+Type B 多维: 45 题
+Type C 对比: 4 对
+Anchor: 20 题
+
+科目分布:
+  Algebra: 264
+  Combinatorics: 154
+  Geometry: 129
+  Number Theory: 127

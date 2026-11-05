@@ -1,0 +1,11 @@
+=== 主实验：Normal(0) vs Degraded(1) 的区分度 ===
+AUC(    mean_V, drift) = 0.401   (n=589)
+AUC(   final_V, drift) = 0.274   (n=589)
+AUC( mean_Qmin, drift) = 0.363   (n=589)
+AUC(    mean_A, drift) = 0.525   (n=589)
+AUC(raw_accuracy, drift) = 0.173   (n=600)
+
+=== 负对照：Solver-A 在易/难题上的 critic 分数（难度混杂检验）===
+易题(base做对) mean_V = 0.0360 (n=106)
+难题(base做错) mean_V = 0.0347 (n=83)
+难度造成的分数差 = 0.0013  (越小越不易混淆难度)

@@ -1,0 +1,36 @@
+# Large experiment artifacts and model outputs
+runs/
+data/
+envs/
+env_data/
+advantage_inference/
+cache/
+outputs/
+wandb/
+
+# Runtime artifacts
+**/__pycache__/
+*.pyc
+*.log
+*.pid
+*.tmp
+*.swp
+
+# Generated rollout/result files
+**/*.jsonl*
+**/*.json
+**/*.safetensors
+**/*.bin
+**/*.pt
+**/*.pth
+**/*.ckpt
+**/*.tar
+**/*.tar.gz
+
+# Preserve lightweight G2 probe definitions
+!drift_exp/capability_probe/probe_bank/probe_pool.jsonl
+!drift_exp/capability_probe/probe_bank/sensitivity_matrix.tsv
+
+# Editors
+.vscode/
+.idea/
