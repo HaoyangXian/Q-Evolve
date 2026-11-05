@@ -34,3 +34,6 @@ wandb/
 # Editors
 .vscode/
 .idea/
+
+# Local backup files
+*.bak*
