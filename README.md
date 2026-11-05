@@ -10,7 +10,7 @@ The current research sequence is:
 2. Identifiability under finite passive observation.
 3. Comparison of passive, static, and adaptive probing.
 
-The current Self-Evolution assets represent a Base ? SFT ? Critic/Advantage ? Policy transition. They do not yet form a closed multi-round evolution loop.
+The current Self-Evolution assets represent a Base -> SFT -> Critic/Advantage -> Policy transition. They do not yet form a closed multi-round evolution loop.
 
 ## Repository layout
 
@@ -43,19 +43,19 @@ These commands validate syntax without starting GPU jobs.
 
 ## Running experiments
 
-Read `autoresearch/research_state.md` before starting. Use the launch scripts under `bin/` or `drift_exp/`; do not run large jobs without recording an experiment ID, commit, model paths, data split, seed, evaluator version, command, and output paths.
+Read `autoresearch/research_state.md` before starting. Use the launch scripts under `bin/` or `drift_exp/`; do not run large jobs without recording an experiment ID, commit, model paths, data split, random seed, evaluator version, command, and output paths.
 
 Each experiment record belongs under:
 
 ```text
 autoresearch/experiments/EXP-YYYYMMDD-name/
-??? README.md
-??? config.json
-??? commands.sh
-??? raw/
-??? logs/
-??? derived/
-??? report.md
+|-- README.md
+|-- config.json
+|-- commands.sh
+|-- raw/
+|-- logs/
+|-- derived/
+`-- report.md
 ```
 
 Raw results must not be overwritten. Derived statistics must identify the script and input files. Only reviewed results may update `research_state.md`.
